@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "email": "raj@gmail.com",
+      "phone": "7769851915",
+      "password": "raj123",
+      "id": 1
+    },
+    {
+      "email": "hari@gmail.com",
+      "phoneNo": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "email": "ankit@gmail.com",
+      "phoneNo": "7685832341",
+      "password": "ankit123",
+      "id": 3
+    },
+    {
+      "email": "",
+      "phoneNo": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "email": "paragh@gmail.com",
+      "phone": "4345565",
+      "password": "paragh123",
+      "id": 5
+    },
+    {
+      "email": "lang",
+      "phoneNo": 4567,
+      "password": "mang",
+      "id": 6
+    }
+  ]
+}

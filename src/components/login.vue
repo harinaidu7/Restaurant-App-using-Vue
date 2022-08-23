@@ -7,19 +7,19 @@
             </div>
 
             <div>
-               <input type="text" placeholder="Email id"/>
+               <input type="text" v-model="email" placeholder="Enter Email"/>
             </div>
 
             <div>
-               <input type="text" placeholder="Phone no"/>
+               <input type="number" v-model="phoneNo" placeholder="Enter Phone No"/>
             </div>
 
             <div>
-               <input type="text" placeholder="Password" />
+               <input type="password" v-model="password" placeholder="Enter Password" />
             </div>
 
            <div>
-               <button>Sign Up</button>
+               <button @click="signUp">Sign Up</button>
            </div>
         </form>
             
@@ -27,8 +27,33 @@
 </template>
 
 <script>
+import axios from 'axios'
     export default {
-        name:'login'
+        name:'login',
+
+        data(){
+            return{
+                email :'',
+                phoneNo :'',
+                password :''
+
+            }
+        },
+        methods:{
+            async signUp(){
+                let result = await axios.post("http://localhost:3000/users",{
+                    email:this.email,
+                    phoneNo:this.phoneNo,
+                    password:this.password 
+                });
+
+                if(result.status==201){
+                    localStorage.setItem("user-info",JSON.stringify(result.data))
+                    this.$router.push({name :'Home'})
+                }
+            }
+        }
+     
     }
 </script>
 
