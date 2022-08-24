@@ -1,7 +1,7 @@
 <template>
     <div>
     <div class="nav">
-            <span id="icon" style='font-size:24px' class='fas'>&#xf805;</span>
+           
             <a href="#">Home</a>
             <a href="#">Add Restaurant </a>
             <a href="#">Update restaurant </a>
@@ -21,9 +21,7 @@
 body{
     margin: 0;
 }
-#icon{
-    color: greenyellow
-}
+
 
 .nav{
 
