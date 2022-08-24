@@ -1,16 +1,15 @@
 <template>
   <div>  
-    
     <router-view/>
   </div>
 </template>
 
-<script>
-import Login from "./components/login.vue";
-import Home from "./components/home.vue";
+<script >
+// import SignUp from "./components/login.vue";
+// import Home from "./components/home.vue";
   export default{
     name:'App',
-    components: { Login, Home }
+    // components: { SignUp, Home }
 }
 </script>
 
@@ -34,5 +33,9 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+body{
+  margin: 0;
+  padding: 0px
 }
 </style>
