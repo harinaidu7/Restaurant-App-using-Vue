@@ -2,17 +2,37 @@
     <div>
     <div class="nav">
            
-            <a href="#">Home</a>
-            <a href="#">Add Restaurant </a>
-            <a href="#">Update restaurant </a>
-            <a href="#">Logout</a>
+            <router-link to="/">Home</router-link>
+            <router-link to="add">Add Restaurant </router-link>
+            <router-link to="update">Update restaurant </router-link>
+            <a @click="logout" href="#">Logout</a>
             
     </div>
+            <h2 v-show="bye">Bye!!!!!</h2>
     </div>
 </template>
 
 <script>
     export default {
+        name:'Header',
+        data(){
+            return{
+                bye:false
+            }
+        },
+
+        methods:{
+            logout(){
+                localStorage.clear();
+                this.bye= true 
+                setTimeout(() => {
+                    this.$router.push('Login')
+                    
+                }, 3000);
+
+            },
+           
+        }
         
     }
 </script>

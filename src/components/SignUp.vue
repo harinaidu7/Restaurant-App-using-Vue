@@ -7,6 +7,10 @@
             </div>
 
             <div>
+                <input type="text" v-model="name" placeholder="Enter name"/>
+            </div>
+
+            <div>
                <input type="text" v-model="email" placeholder="Enter Email"/>
             </div>
 
@@ -34,6 +38,7 @@ import axios from 'axios'
         data()
         {
             return{
+                name:'',
                 email :'',
                 phoneNo :'',
                 password :''
@@ -43,11 +48,12 @@ import axios from 'axios'
         methods:{
             async signUp()
             {
-                 console.warn("signUp",this.phoneNo,this.email,this.password)
+                 console.warn("signUp",this.phoneNo,this.email,this.password,this.name)
                   
 
                 
                 let result = await axios.post("http://localhost:3000/users",{
+                    name:this.name,
                     email:this.email,
                     phoneNo:this.phoneNo,
                     password:this.password 

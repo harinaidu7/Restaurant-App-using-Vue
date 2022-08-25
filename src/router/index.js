@@ -1,6 +1,8 @@
 import Home from '../components/home.vue'
 import SignUp from '../components/SignUp.vue'
 import Login from '@/components/login.vue'
+import Add from '../components/add.vue'
+import Update from '../components/update.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 
@@ -19,7 +21,17 @@ const routes = [
       name :'Login',
       component:Login,
       path:'/login'
-    } 
+    },
+    {
+      name: 'Add',
+      component:Add,
+      path:'/add'
+    },
+    {
+      name:'Upadate',
+      component:Update,
+      path:'/update'
+    }
 ]
 
 const router = createRouter({
