@@ -7,19 +7,19 @@
             </div>
 
             <div>
-                <input type="text" v-model="name" placeholder="Enter name"/>
+                <input type="text" v-model="name" placeholder="Enter name :"/>
             </div>
 
             <div>
-               <input type="text" v-model="email" placeholder="Enter Email"/>
+               <input type="text" v-model="email" placeholder="Enter Email :"/>
             </div>
 
             <div>
-               <input type="number" v-model="phoneNo" placeholder="Enter Phone No"/>
+               <input type="number" v-model="phoneNo" placeholder="Enter Phone No :"/>
             </div>
 
             <div>
-               <input type="password" v-model="password" placeholder="Enter Password" />
+               <input type="password" v-model="password" placeholder="Enter Password :" />
             </div>
 
            <div>
@@ -116,5 +116,8 @@ button {
   background-color: #1a73e8;
   color: #ddd;
   border-radius: 5px;
+}
+p{
+    text-align: center
 }
 </style>
