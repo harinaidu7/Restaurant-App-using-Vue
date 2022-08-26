@@ -4,7 +4,6 @@
            
             <router-link to="/">Home</router-link>
             <router-link to="add">Add Restaurant </router-link>
-            <router-link to="update">Update restaurant </router-link>
             <a @click="logout" href="#">Logout</a>
             
     </div>

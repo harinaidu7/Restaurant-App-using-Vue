@@ -62,7 +62,7 @@ import axios from 'axios'
 }
 </script>
 
-<style >
+<style scoped>
 form{
     max-width: 420px;
     margin: 30px auto;

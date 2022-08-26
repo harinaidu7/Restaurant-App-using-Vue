@@ -30,8 +30,9 @@ const routes = [
     {
       name:'Upadate',
       component:Update,
-      path:'/update'
-    }
+      path:'/update/:id'
+    },
+   
 ]
 
 const router = createRouter({

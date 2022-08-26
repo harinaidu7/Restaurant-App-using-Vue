@@ -6,9 +6,10 @@
        <table>
             <tr>
                 <th>ID</th>
-                <th>Name</th>
+                <th>NAME</th>
                 <th>ADDRESS</th>
                 <th>CONTACT</th>
+                <th>ACTIONS</th>
             </tr>
 
             <tr v-for="item in restaurants " :key="item.id" >
@@ -16,6 +17,10 @@
                 <td>{{item.name}}</td>
                 <td>{{item.address}}</td>
                 <td>{{item.contact}}</td>
+                <td>
+                <router-link :to="'/update/' + item.id">UPDATE</router-link>
+                <button v-on:click="deleteResto(item.id)" id="delButton">Delete</button>
+                </td>
             </tr>
        </table> 
     </div>
@@ -35,15 +40,29 @@ import Header from './header.vue'
         }
     },
 
-   async mounted() {
-        let user = localStorage.getItem("user-info");
-        this.name= JSON.parse(user).name
-        if (!user) {
-            this.$router.push({ name: "SignUp" });
+    methods:{
+        async deleteResto(id){
+             let result = await axios.delete("http://localhost:3000/restaurants/"+id)
+             if(result.status==200){
+                  this.loadData()
+             } 
+        },
+        async loadData(){
+              let user =  localStorage.getItem("user-info");
+              this.name= JSON.parse(user).name
+              if (!user) {
+              this.$router.push({ name: "SignUp" });
+               }
+              let result = await axios.get("http://localhost:3000/restaurants") 
+              console.table(result.data)
+              this.restaurants=result.data
+
         }
-        let result = await axios.get("http://localhost:3000/restaurants") 
-        console.table(result.data)
-        this.restaurants=result.data
+    },
+
+     mounted() {
+        this.loadData()
+
     },
     components: { Header }
     }
@@ -64,6 +83,15 @@ td,th{
 }
 th{
     background-color:#34a1b7c4 
+}
+.action{
+    padding: 5px;
+    font-size: 15px
+}
+
+#delButton{
+    background-color: rgba(230, 52, 20, 0.798);
+    width: max-content  
 }
 
 </style>

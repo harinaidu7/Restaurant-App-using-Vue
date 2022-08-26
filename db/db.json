@@ -13,20 +13,41 @@
       "phoneNo": 7769584125,
       "password": "raj123",
       "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "phoneNo": "",
+      "password": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "phoneNo": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "name": "hary",
+      "email": "hary@gmail.com",
+      "phoneNo": 789456123,
+      "password": "hary@123",
+      "id": 5
     }
   ],
   "restaurants": [
     {
-      "id": 1,
-      "name": "KFC",
-      "address": "Dadar",
-      "contact": 678
+      "name": "APETITE MOMOS",
+      "address": "Thane",
+      "contact": 258,
+      "id": 5
     },
     {
-      "id": 2,
-      "name": "BBQ",
-      "address": "Vasai",
-      "contact": "0250"
+      "name": "CELEBRITY",
+      "address": "VASAI",
+      "contact": 250,
+      "id": 6
     }
   ]
 }
