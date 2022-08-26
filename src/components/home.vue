@@ -17,9 +17,10 @@
                 <td>{{item.name}}</td>
                 <td>{{item.address}}</td>
                 <td>{{item.contact}}</td>
-                <td>
-                <router-link :to="'/update/' + item.id">UPDATE</router-link>
-                <button v-on:click="deleteResto(item.id)" id="delButton">Delete</button>
+                <td id="btr">
+                <router-link :to="'/update/' + item.id"><i id="update-logo" class='far fa-edit' ></i></router-link>
+                
+                 <button v-on:click="deleteResto(item.id)" id="delButton">X</button>
                 </td>
             </tr>
        </table> 
@@ -88,10 +89,22 @@ th{
     padding: 5px;
     font-size: 15px
 }
+#update-logo{
+
+font-size:25px;
+color:rgb(11, 11, 11);
+}
 
 #delButton{
     background-color: rgba(230, 52, 20, 0.798);
-    width: max-content  
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
+    /* border-bottom: 1px solid #ddd; */
+    color: rgb(0, 0, 0);
+    width: 30px;
+    border-radius: 5px;
 }
+
+
 
 </style>
