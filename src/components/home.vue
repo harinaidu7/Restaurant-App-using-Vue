@@ -104,6 +104,9 @@ color:rgb(11, 11, 11);
     width: 30px;
     border-radius: 5px;
 }
+#delButton:hover{
+    cursor: pointer;
+}
 
 
 

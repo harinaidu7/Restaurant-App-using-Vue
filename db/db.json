@@ -34,6 +34,20 @@
       "phoneNo": 789456123,
       "password": "hary@123",
       "id": 5
+    },
+    {
+      "name": "ankit",
+      "email": "ankit@gmil.com",
+      "phoneNo": 7894561234,
+      "password": "ankit@123",
+      "id": 6
+    },
+    {
+      "name": "Neel",
+      "email": "neel@gmail.com",
+      "phoneNo": 7896542312,
+      "password": "neel@123",
+      "id": 7
     }
   ],
   "restaurants": [
@@ -44,9 +58,9 @@
       "id": 5
     },
     {
-      "name": "CELEBRITY",
-      "address": "VASAI",
-      "contact": 250,
+      "name": "Prathik",
+      "address": "Sion",
+      "contact": 4572,
       "id": 6
     }
   ]
